@@ -1,0 +1,74 @@
+$(document).ready(function(){
+
+    /* перевод картинки svg в код */
+    $('.icon img, img.icon').each(function(){
+        var $img = $(this);
+        var imgClass = $img.attr('class');
+        var imgURL = $img.attr('src');
+        $.get(imgURL, function(data) {
+            var $svg = $(data).find('svg');
+            if(typeof imgClass !== 'undefined') {
+                $svg = $svg.attr('class', imgClass+' replaced-svg');
+            }
+            $svg = $svg.removeAttr('xmlns:a');
+            if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+                $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+            }
+            $img.replaceWith($svg);
+        }, 'xml');
+    });
+    /* end перевод картинки svg в код */
+
+    function format(state) {
+        if (!state.id) return state.text; // optgroup
+        return "<span class='flag_img'><img class='flag' src='img/flags/" + state.id.toLowerCase() + ".png'/></span>" + "<span>" + state.text; + "<span>";
+        console.log(state.id.toLowerCase());
+    }
+    $(".lang_select").select2({
+        minimumResultsForSearch: Infinity,
+        formatResult: format,
+        formatSelection: format,
+        escapeMarkup: function(m) { return m; }
+    });
+
+
+
+    $(".m_slider").slick({
+        infinite: true,
+        arrows: true,
+        dots: true,
+        //autoplay: true,
+        //speed: 3000,
+        //autoplaySpeed: 3000,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+
+
+    $('.hamburger').click(function () {
+        $('.main_menu').toggleClass('open');
+        $('html').toggleClass('page-noscroll');
+
+        $('.main_menu .mm_close').click(function () {
+            $('.main_menu').removeClass('open');
+            $('html').removeClass('page-noscroll');
+        });
+        return false;
+    });
+    $(document).on('click', function(e) {
+        if (!$(e.target).closest(".main_menu.open").length) {
+            $(".main_menu.open").removeClass('open');
+            $("html").removeClass('page-noscroll');
+        }
+        e.stopPropagation();
+    });
+
+    $('.arrow').click(function(){
+        $(this).toggleClass('act').next().slideToggle();
+    });
+
+
+
+});
+
+
