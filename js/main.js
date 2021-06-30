@@ -63,8 +63,23 @@ $(document).ready(function(){
         e.stopPropagation();
     });
 
-    $('.arrow').click(function(){
-        $(this).toggleClass('act').next().slideToggle();
+    $(function () {
+        $('input, textarea').each(function () {
+            $(this).blur(function(){
+                if(!this.value){
+                    $(this).removeClass('hide_label');
+                }
+                else{
+                    $(this).addClass('hide_label');
+                }
+            });
+            if ( !this.value ) {
+                $(this).removeClass('hide_label');
+            }
+            else{
+                $(this).addClass('hide_label');
+            }
+        });
     });
 
 
