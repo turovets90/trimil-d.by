@@ -1052,3 +1052,151 @@ header
   color: red
 
 
+.main_clients_list
+  .slick-arrow
+    width: 11px
+    height: 18px
+    z-index: 2
+    &:before
+      +b_a
+      +m_a
+      width: 11px
+      height: 18px
+
+  .slick-prev
+    left: 0
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 1L1 9L10 17' stroke='%235B5B5B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  .slick-next
+    right: 0
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L10 9L1 17' stroke='%235B5B5B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  .item
+    picture
+      display: inline-block
+      position: relative
+      height: 55px
+      width: 100%
+      img
+        position: absolute
+        +m_a
+        max-height: 55px
+.main_clients
+  padding-bottom: 120px
+  @media (max-width: 1200px)
+    padding-bottom: 100px
+  @media (max-width: 991px)
+    padding-bottom: 80px
+  @media (max-width: 767px)
+    padding-bottom: 50px
+  h2, .h2
+    @media (min-width: 1201px)
+      margin-bottom: 45px
+
+
+
+
+
+footer
+  background-size: cover
+  background-position: center
+  position: relative
+  padding-top: 48px
+  &:before
+    +b_a
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: rgba(51, 51, 51, 0.8)
+
+  .container
+    position: relative
+
+  .footer_row
+    +flex
+    +wrap
+    margin-bottom: 28px
+    .col_left
+      width: 60%
+      +flex
+      +wrap
+      @media (max-width: 1200px)
+        width: 100%
+        margin-bottom: 20px
+      .f_widjet
+        width: 50%
+        @media (max-width: 767px)
+          width: 100%
+          margin-bottom: 20px
+    .col_right
+      width: 40%
+      border-left: 2px solid rgba(196, 196, 196, 0.25)
+      +flex
+      +j-center
+      @media (max-width: 1200px)
+        width: 100%
+        +j-start
+        border-left: 0
+        border-top: 2px solid rgba(196, 196, 196, 0.25)
+        padding-top: 30px
+        .f_widjet
+          width: 100%
+
+  .f_widjet
+    > p
+      color: #fff
+      font-size: 16px
+      font-family: $medium
+      margin-bottom: 20px
+      @media (max-width: 575px)
+        font-size: 14px
+        margin-bottom: 10px
+
+    ul
+      li
+        margin-bottom: 12px
+        @media (max-width: 767px)
+          margin-bottom: 8px
+        a
+          color: #fff
+          font-size: 14px
+          font-family: $reg
+          @media (max-width: 575px)
+            font-size: 12px
+
+    .location
+      color: #fff
+      font-size: 14px
+      line-height: 18px
+      margin-bottom: 25px
+      &:before
+        bottom: initial
+      @media (max-width: 1200px)
+        max-width: 100%
+    .email
+      margin-bottom: 25px
+      a
+        color: #fff
+        font-size: 13px
+    .social_menu
+      li
+        margin-bottom: 0
+    .phones
+      margin-bottom: 25px
+      ul
+        li
+          margin-bottom: 0
+          &:before
+            top: 5px
+            bottom: initial
+          a
+            font-size: 13px
+
+  .copyright
+    color: #fff
+    font-size: 13px
+    text-transform: uppercase
+    border-top: 2px solid rgba(196, 196, 196, 0.25)
+    padding: 18px 0
+
