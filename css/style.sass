@@ -66,6 +66,10 @@ $f_blak: 'Montserrat-Black'
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap')
 $open_sans: 'Open Sans', sans-serif
 
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
+$lato: 'Lato', sans-serif
+
 =b_a()
   content: ''
   position: absolute
@@ -267,15 +271,19 @@ header
   background: rgba(51, 51, 51, 0.3)
   padding: 5px 70px
   color: #fff
-  position: fixed
-  width: 100%
-  left: 0
-  top: 0
+
   z-index: 999
   @media (max-width: 1900px)
     padding: 5px 30px
   @media (max-width: 1400px)
     padding: 5px 10px
+
+.home
+  header
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
 
 .h_row
   +flex
@@ -1200,3 +1208,385 @@ footer
     border-top: 2px solid rgba(196, 196, 196, 0.25)
     padding: 18px 0
 
+
+
+
+
+
+.breadcrumb
+  background: none
+  margin: 0
+  padding: 15px 0
+  li
+    position: relative
+    padding: 0 20px
+    @media (max-width: 1200px)
+      padding: 0 15px
+    @media (max-width: 767px)
+      padding: 0 10px
+    &:first-child
+      padding-left: 0
+
+    + li
+      &:before
+        content: '/'
+        position: absolute
+        left: -2px
+        top: 0
+        bottom: 0
+        margin: auto
+        font-family: $lato
+
+    &:last-child
+      a
+        color: #5B5B5B
+    a
+      color: $black
+      font-size: 14px
+      font-family: $lato
+      @media (max-width: 1200px)
+        font-size: 13px
+      @media (max-width: 767px)
+        font-size: 12px
+
+.page_banner
+  height: 490px
+  position: relative
+  background-position: center
+  background-size: cover
+  +flex
+  +ai-center
+  +j-center
+  @media (max-width: 1200px)
+    height: 450px
+  @media (max-width: 991px)
+    height: 400px
+  @media (max-width: 767px)
+    height: 350px
+  @media (max-width: 575px)
+    height: 300px
+  &:before
+    +b_a
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: linear-gradient(272.25deg, rgba(51, 51, 51, 0.8) 4.55%, rgba(51, 51, 51, 0.352) 106.72%)
+  .container
+    position: relative
+    text-align: center
+    *
+      color: #fff
+
+    .page_subtitle
+      font-size: 22px
+      font-family: $open_sans
+      letter-spacing: 0.05em
+      @media (max-width: 1200px)
+        font-size: 20px
+      @media (max-width: 991px)
+        font-size: 18px
+      @media (max-width: 767px)
+        font-size: 16px
+      @media (max-width: 575px)
+        font-size: 14px
+
+    .page_title
+      margin-bottom: 35px
+      @media (max-width: 1200px)
+        margin-bottom: 30px
+      @media (max-width: 767px)
+
+
+
+.page_content
+  padding: 120px 0
+  @media (max-width: 1200px)
+    padding: 100px 0
+  @media (max-width: 991px)
+    padding: 80px 0
+  @media (max-width: 767px)
+    padding: 50px 0
+  @media (max-width: 575px)
+    padding: 30px 0
+
+
+.c_list
+  > div
+    margin-bottom: 25px
+    @media (max-width: 575px)
+      margin-bottom: 10px
+
+  .c_list_item
+    display: inline-block
+    width: 100%
+    height: 305px
+    background-size: cover
+    background-position: center
+    position: relative
+    padding: 35px
+    text-decoration: none
+    @media (max-width: 1200px)
+      height: 280px
+    &:hover,  &:focus
+      text-decoration: none
+      &:before
+        background: rgba(28, 28, 28, 0.4)
+      .c_list_item_name
+        border-bottom: 2px dashed #FFFFFF
+    @media (max-width: 1200px)
+      padding: 30px
+    @media (max-width: 991px)
+      padding: 20px
+    @media (max-width: 767px)
+      padding: 15px
+    &:before
+      +b_a
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background: rgba(28, 28, 28, 0.15)
+    .c_list_item_name
+      position: relative
+      color: #fff
+      font-size: 16px
+      text-transform: uppercase
+      letter-spacing: 0.05em
+      line-height: 22px
+      font-family: $open_sans
+      font-weight: 600
+      display: inline-block
+      padding-bottom: 8px
+      @media (max-width: 1200px)
+        font-size: 14px
+
+
+h3, .h3
+  font-size: 16px
+  color: $black
+  line-height: 22px
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  font-family: $open_sans
+  margin-bottom: 28px
+  @media (max-width: 1200px)
+    margin-bottom: 20px
+  @media (max-width: 767px)
+    margin-bottom: 15px
+.page_desc
+  background: #F4F4F4
+  color: #5B5B5B
+  font-size: 16px
+  line-height: 26px
+  letter-spacing: 0.05em
+  padding: 50px 0
+  min-height: 490px
+  +flex
+  +ai-center
+  +j-center
+  @media (max-width: 1200px)
+    min-height: 400px
+  @media (max-width: 767px)
+    min-height: 300px
+
+.category_desc
+  margin: -83px 0 -58px
+  @media (max-width: 1200px)
+    margin: -55px 0 -30px
+  @media (max-width: 767px)
+    margin: -35px 0 -10px
+  @media (max-width: 575px)
+    margin: -10px 0
+
+
+.top_minus
+  margin-top: -83px
+  @media (max-width: 1200px)
+    margin-top: -55px
+  @media (max-width: 767px)
+    margin-top: -35px
+  @media (max-width: 575px)
+    margin-top: -10px
+
+.bottom_minus
+  margin-bottom: -58px
+  @media (max-width: 1200px)
+    margin-bottom: -30px
+  @media (max-width: 767px)
+    margin-bottom: -10px
+
+
+.page_video
+  iframe
+    width: 100%
+    height: 600px
+    @media (max-width: 1200px)
+      height: 500px
+    @media (max-width: 991px)
+      height: 400px
+    @media (max-width: 767px)
+      height: 350px
+    @media (max-width: 575px)
+      height: 300px
+
+
+.products
+  .h2, h2
+    @media (min-width: 1201px)
+      margin-bottom: 55px
+.products_list
+  > div
+    margin-bottom: 25px
+    @media (max-width: 575px)
+      margin-bottom: 10px
+
+  .product_item
+    border: 1px solid #EBECED
+    +border-radius(2px)
+    padding: 35px
+    background: #fff
+    @media (max-width: 1200px)
+      padding: 30px
+    @media (max-width: 767px)
+      padding: 20px
+    @media (max-width: 575px)
+      padding: 15px
+
+    .btn_default
+      width: 100%
+      height: 40px
+      +border-radius(2px)
+      font-size: 15px
+    .img_thumbnail
+      display: inline-block
+      position: relative
+      width: 100%
+      height: 300px
+      background: #F1F1F1
+      +border-radius(2px)
+      margin-bottom: 10px
+      @media (max-width: 1200px)
+        height: 280px
+      @media (max-width: 767px)
+        height: 250px
+      @media (max-width: 575px)
+        height: 220px
+      img
+        position: absolute
+        +m_a
+        max-height: 90%
+
+    .product_item_title
+      text-decoration: none
+      color: $black
+      font-size: 16px
+      font-family: $open_sans
+      font-weight: 600
+      display: block
+      margin-bottom: 10px
+    .product_item_excerpt
+      font-size: 13px
+      line-height: 18px
+      color: #5B5B5B
+      font-family: $open_sans
+      margin-bottom: 18px
+
+
+.gallery
+  padding-bottom: 180px
+  @media (max-width: 1200px)
+    padding-bottom: 150px
+  @media (max-width: 991px)
+    padding-bottom: 100px
+  @media (max-width: 767px)
+    padding-bottom: 80px
+.gallery_list
+  .slick-dots
+    @media (min-width: 1201px)
+      margin-bottom: -35px
+  .slick-arrow
+    width: 11px
+    height: 18px
+    z-index: 2
+    &:before
+      +b_a
+      +m_a
+      width: 11px
+      height: 18px
+      opacity: 1
+  .slick-prev
+    left: -17px
+    @media (max-width: 1400px)
+      left: 0
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 1L1 9L10 17' stroke='%235B5B5B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  .slick-next
+    right: -17px
+    @media (max-width: 1400px)
+      right: 0
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='18' viewBox='0 0 11 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L10 9L1 17' stroke='%235B5B5B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+  .gallery_item
+    text-align: center
+    a[data-fancybox]
+      display: inline-block
+      position: relative
+      text-decoration: none
+      &:hover, &:focus
+        text-decoration: none
+        &:before, .gallery_title
+          opacity: 1
+
+      &:before
+        +b_a
+        width: 100%
+        height: 100%
+        left: 0
+        top: 0
+        background: rgba(28, 28, 28, 0.4)
+        opacity: 0
+        +transition($transition_default)
+      .gallery_title
+        color: #fff
+        font-size: 16px
+        font-family: $open_sans
+        font-weight: 600
+        letter-spacing: 0.05em
+        position: absolute
+        +m_a
+        height: 50px
+        width: 100%
+        +flex
+        +ai-center
+        +j-center
+        opacity: 0
+        +transition($transition_default)
+        span
+          display: inline-block
+          position: relative
+          border-bottom: 2px dashed #FFFFFF
+          padding-bottom: 6px
+
+
+
+
+.gallery
+  .h2, h2
+    @media (min-width: 1201px)
+      margin-bottom: 50px
+
+
+.b_feedback
+  background-position: center
+  background-size: cover
+  padding: 120px 0 100px
+  @media (max-width: 1200px)
+    padding: 100px 0 80px
+  @media (max-width: 991px)
+    padding: 80px 0 60px
+  @media (max-width: 767px)
+    padding: 60px 0 40px
+  .feedback_form
+    max-width: 890px
+    margin: auto

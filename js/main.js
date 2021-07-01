@@ -112,7 +112,7 @@ $(document).ready(function(){
                 }
             ]
         });
-    }else if($(window).innerWidth() < 575 && $('.main_clients_list .item').length > 1){
+    }else if($(window).innerWidth() < 575 && $('.main_clients_list .item').length > 2){
         $('.main_clients_list').slick({
             autoplay: false,
             dots: false,
@@ -137,6 +137,62 @@ $(document).ready(function(){
             slidesToScroll: 1
         });
     }
+
+
+    if($('.gallery_list .item').length > 4){
+        $('.gallery_list').slick({
+            autoplay: false,
+            dots: true,
+            arrows: true,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    }else if($(window).innerWidth() < 575 && $('.gallery_list .item').length > 1){
+        $('.gallery_list').slick({
+            autoplay: false,
+            dots: true,
+            arrows: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+    }else if($(window).innerWidth() < 767 && $('.gallery_list .item').length > 2){
+        $('.gallery_list').slick({
+            autoplay: false,
+            dots: true,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        });
+    }else if($(window).innerWidth() < 991 && $('.gallery_list .item').length > 2){
+        $('.gallery_list').slick({
+            autoplay: false,
+            dots: true,
+            arrows: true,
+            slidesToShow: 2,
+            slidesToScroll: 1
+        });
+    }
+
 
 
 
