@@ -62,10 +62,8 @@ $extrabold: 'Montserrat-ExtraBold'
 $f_blak: 'Montserrat-Black'
 
 
-
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap')
 $open_sans: 'Open Sans', sans-serif
-
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap')
 $lato: 'Lato', sans-serif
@@ -268,23 +266,133 @@ body
     line-height: 1.3
 
 
+footer
+  .social_menu
+    li
+      a
+        svg
+          *
+            fill: #fff
+
+
+.home
+  header
+    background: none
+  .h_info
+    color: #fff
+    a
+      color: #fff
+  .mm_container
+    background: rgba(28, 28, 28, 0.4)
+
+  .main_menu
+    .nav
+      li
+        a
+          color: #fff
+  .social_menu
+    li
+      a
+        svg
+          *
+            fill: #fff
+
+    .phones
+      ul
+        li
+          &:before
+
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='white'/%3e%3c/svg%3e ")
+
+
+
+  .email
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.3 0H1.7C0.765 0 0.00849999 0.7875 0.00849999 1.75L0 12.25C0 13.2125 0.765 14 1.7 14H15.3C16.235 14 17 13.2125 17 12.25V1.75C17 0.7875 16.235 0 15.3 0ZM15.3 3.5L8.5 7.875L1.7 3.5V1.75L8.5 6.125L15.3 1.75V3.5Z' fill='white'/%3e%3c/svg%3e ")
+    a
+      display: inline-block
+  .location
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.5 0C2.45929 0 0 2.3475 0 5.25C0 9.1875 5.5 15 5.5 15C5.5 15 11 9.1875 11 5.25C11 2.3475 8.54071 0 5.5 0ZM5.5 7.125C4.41571 7.125 3.53571 6.285 3.53571 5.25C3.53571 4.215 4.41571 3.375 5.5 3.375C6.58429 3.375 7.46429 4.215 7.46429 5.25C7.46429 6.285 6.58429 7.125 5.5 7.125Z' fill='white'/%3e%3c/svg%3e ")
+  .phones
+    ul
+      li
+        &:before
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='white'/%3e%3c/svg%3e ")
+
+
+
+
+
+
+body
+  &:not(.home)
+    header
+      +box-shadow( 1px 3px 20px rgba(0, 0, 0, 0.12))
+      background: #fff
+      &.fixed
+        .mm_container
+          border-top: 1px solid rgba(28, 28, 28, 0.1)
+    .mm_container
+      border-top: 1px solid rgba(28, 28, 28, 0.1)
+      .dropdown
+        .search_toggler
+          &:before
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.3581 7.12903C13.3581 10.5692 10.5692 13.3581 7.12903 13.3581C3.68883 13.3581 0.9 10.5692 0.9 7.12903C0.9 3.68883 3.68883 0.9 7.12903 0.9C10.5692 0.9 13.3581 3.68883 13.3581 7.12903Z' stroke='%231c1c1c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12.0625 12.0645L16.998 17' stroke='%231c1c1c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 header
-  background: rgba(51, 51, 51, 0.3)
+  position: fixed
+  width: 100%
+  left: 0
+  top: 0
   padding: 5px 70px
   color: #fff
-
   z-index: 999
+  +transition($transition_default)
   @media (max-width: 1900px)
     padding: 5px 30px
   @media (max-width: 1400px)
     padding: 5px 10px
+  @media (max-width: 1200px)
+    padding: 5px 0
+  &.fixed
+    background: $black
+    .mm_container
+      border-top: 1px solid #3E3E3E
+    .logo
+      img
+        @media (max-width: 1200px)
+          max-width: 70px
 
-.home
-  header
-    position: fixed
-    width: 100%
-    left: 0
-    top: 0
+  .phones
+    ul
+      li
+        &:before
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='%231C1C1C'/%3e%3c/svg%3e ")
+
+
+
+  .email
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.3 0H1.7C0.765 0 0.00849999 0.7875 0.00849999 1.75L0 12.25C0 13.2125 0.765 14 1.7 14H15.3C16.235 14 17 13.2125 17 12.25V1.75C17 0.7875 16.235 0 15.3 0ZM15.3 3.5L8.5 7.875L1.7 3.5V1.75L8.5 6.125L15.3 1.75V3.5Z' fill='%231C1C1C'/%3e%3c/svg%3e ")
+    a
+      display: inline-block
+  .location
+    &:before
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.5 0C2.45929 0 0 2.3475 0 5.25C0 9.1875 5.5 15 5.5 15C5.5 15 11 9.1875 11 5.25C11 2.3475 8.54071 0 5.5 0ZM5.5 7.125C4.41571 7.125 3.53571 6.285 3.53571 5.25C3.53571 4.215 4.41571 3.375 5.5 3.375C6.58429 3.375 7.46429 4.215 7.46429 5.25C7.46429 6.285 6.58429 7.125 5.5 7.125Z' fill='%231C1C1C'/%3e%3c/svg%3e ")
+
+
+
+.logo
+  img
+    @media (max-width: 1200px)
+      max-width: 90px
+    @media (max-width: 767px)
+      //max-width: 100px
+    @media (max-width: 575px)
+      max-width: 80px
+
+
+
 
 .h_row
   +flex
@@ -292,25 +400,27 @@ header
   +wrap
   @media (max-width: 1900px)
     +j-beetween
-
-
   .col_left
     width: 25%
     @media (max-width: 1900px)
       width: 120px
       padding-right: 20px
     @media (max-width: 1200px)
-      width: 120px
-    @media (max-width: 767px)
-      width: 100px
-    @media (max-width: 575px)
-      width: 80px
+      width: 100%
+      text-align: center
+      padding-right: 0
+    @media (max-width: 991px)
+      +flex
+      +j-beetween
+      +ai-center
+      > div
+        width: 33.33%
   .col_right
     width: 75%
     @media (max-width: 1900px)
       width: calc(100% - 170px)
     @media (max-width: 1200px)
-      width: calc(100% - 120px)
+      width: 100%
     @media (max-width: 767px)
       width: calc(100% - 100px)
     @media (max-width: 575px)
@@ -324,21 +434,23 @@ header
   line-height: 1
   font-family: $open_sans
   font-weight: 500
-  color: #fff
+  color: $black
   //margin-bottom: 20px
   padding: 18px 0
   @media (max-width: 1200px)
-    +j-end
+    //+j-end
     margin-bottom: 0
     > div, > ul
       margin-left: 15px
+  @media (max-width: 991px)
+    display: none
   .dropdown
     @media (min-width: 1201px)
       display: none
 
 
   a
-    color: #fff
+    color: $black
 
 
 
@@ -426,11 +538,12 @@ header
 .mm_container
   +flex
   +ai-center
-  background: rgba(28, 28, 28, 0.4)
+
   min-height: 60px
-  @media (max-width: 1200px)
+  @media (max-width: 991px)
     padding: 0
     min-height: initial
+    border-top: 0 !important
 
 
   .dropdown
@@ -441,6 +554,7 @@ header
       width: 60px
     @media (max-width: 1200px)
       display: none
+
     .search_toggler
       position: relative
       width: 40px
@@ -472,7 +586,7 @@ header
           border: 0
           height: 40px
           width: calc(100% - 40px)
-          +border-radius(0)
+          +border-radius(2px)
         .btn_search
           background: $black
           border: 0
@@ -490,15 +604,18 @@ header
   @media (max-width: 1400px)
     width: calc(100% - 60px)
   @media (max-width: 1200px)
-    width: 80%
+    width: 100%
+  @media (max-width: 991px)
+    //width: 80%
     height: 100%
     position: fixed
     right: 0
     top: 0
-    padding-top: 50px
+    padding-top: 30px
+    padding-right: 30px
     +transform(translateX(100%))
     opacity: 0
-    background: $black_light
+    background: $black
     +transition($transition_default)
     z-index: 9999
     &.open
@@ -506,13 +623,13 @@ header
       +transform(translateX(0))
 
   .mm_close
-    @media (min-width: 1201px)
+    @media (min-width: 992px)
       display: none
     width: 30px
     height: 30px
-    background: #fff
+    //background: #fff
     position: absolute
-    left: 0
+    right: 0
     top: 0
 
     &:before, &:after
@@ -520,22 +637,58 @@ header
       +m_a
       width: 25px
       height: 1px
-      background: $black_light
+      background: #fff
     &:before
       +transform(rotate(-45deg))
     &:after
       +transform(rotate(45deg))
 
+  .d_hide
+    padding-left: 10px
+    > div, > ul
+      width: 100%
+      max-width: 100%
+      margin-bottom: 10px
+    @media (min-width: 992px)
+      display: none
+
+    a
+      color: #fff
+    .social_menu
+      li
+        a
+          svg
+            *
+              fill: #fff
+    .email
+      &:before
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='14' viewBox='0 0 17 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M15.3 0H1.7C0.765 0 0.00849999 0.7875 0.00849999 1.75L0 12.25C0 13.2125 0.765 14 1.7 14H15.3C16.235 14 17 13.2125 17 12.25V1.75C17 0.7875 16.235 0 15.3 0ZM15.3 3.5L8.5 7.875L1.7 3.5V1.75L8.5 6.125L15.3 1.75V3.5Z' fill='white'/%3e%3c/svg%3e ")
+      a
+        display: inline-block
+    .location
+      &:before
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='15' viewBox='0 0 11 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.5 0C2.45929 0 0 2.3475 0 5.25C0 9.1875 5.5 15 5.5 15C5.5 15 11 9.1875 11 5.25C11 2.3475 8.54071 0 5.5 0ZM5.5 7.125C4.41571 7.125 3.53571 6.285 3.53571 5.25C3.53571 4.215 4.41571 3.375 5.5 3.375C6.58429 3.375 7.46429 4.215 7.46429 5.25C7.46429 6.285 6.58429 7.125 5.5 7.125Z' fill='white'/%3e%3c/svg%3e ")
+    .phones
+      ul
+        li
+          &:before
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='white'/%3e%3c/svg%3e ")
+
 
   .nav
     +flex
     +j-beetween
+    @media (min-width: 992px)
+      flex-wrap: nowrap
+    @media (max-width: 991px)
+      margin-bottom: 30px
     li
       //width: 16.66%
 
       +flex
       +ai-center
-      @media (max-width: 1200px)
+      text-align: center
+      @media (max-width: 991px)
         width: 100%
         text-align: left
 
@@ -545,7 +698,7 @@ header
         font-size: 12px
         line-height: 15px
         text-transform: uppercase
-        color: #fff
+        color: $black
         letter-spacing: 0.05em
         display: inline-block
         width: 100%
@@ -557,24 +710,46 @@ header
           letter-spacing: 0
         @media (max-width: 1200px)
           max-width: 100%
+          text-align: center
+        @media (max-width: 991px)
           text-align: left
+          color: #fff
+
         &:hover
           text-decoration: underline
 
 
+.h_row
+  .c_right
+    +flex
+    +ai-center
+    +j-end
 
 
+    @media (min-width: 992px)
+      display: none
+
+
+
+
+.home
+  .mm_btn
+    .hamburger
+      span
+        background: #fff
 .mm_btn
   +flex
   +ai-center
   margin-left: 20px
+  @media (min-width: 992px)
+    display: none
   > span
     font-family: $semibold
     font-size: 12px
     text-transform: uppercase
     display: inline-block
     margin-right: 10px
-  @media (min-width: 1201px)
+  @media (min-width: 992px)
     display: none
   .hamburger
     width: 25px
@@ -587,7 +762,7 @@ header
       left: 0
       width: 100%
       height: 2px
-      background: #fff
+      background: $black
       +border-radius(2px)
       &:nth-child(1)
         top: 0
@@ -598,12 +773,22 @@ header
       &:nth-child(3)
         bottom: 0
 
+.home
+  .dropdown
+    .search_toggler
+      &:before
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.3581 7.12903C13.3581 10.5692 10.5692 13.3581 7.12903 13.3581C3.68883 13.3581 0.9 10.5692 0.9 7.12903C0.9 3.68883 3.68883 0.9 7.12903 0.9C10.5692 0.9 13.3581 3.68883 13.3581 7.12903Z' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12.0625 12.0645L16.998 17' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+
+
+
 .dropdown
   +flex
   +j-center
   width: 10%
   @media (max-width: 1400px)
     width: 60px
+  @media (max-width: 1200px)
+    width: 40px
   .search_toggler
     position: relative
     width: 40px
@@ -618,7 +803,7 @@ header
       +m_a
       width: 18px
       height: 18px
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.3581 7.12903C13.3581 10.5692 10.5692 13.3581 7.12903 13.3581C3.68883 13.3581 0.9 10.5692 0.9 7.12903C0.9 3.68883 3.68883 0.9 7.12903 0.9C10.5692 0.9 13.3581 3.68883 13.3581 7.12903Z' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12.0625 12.0645L16.998 17' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.3581 7.12903C13.3581 10.5692 10.5692 13.3581 7.12903 13.3581C3.68883 13.3581 0.9 10.5692 0.9 7.12903C0.9 3.68883 3.68883 0.9 7.12903 0.9C10.5692 0.9 13.3581 3.68883 13.3581 7.12903Z' stroke='%231c1c1c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12.0625 12.0645L16.998 17' stroke='%231c1c1c' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
 
 
@@ -635,7 +820,7 @@ header
         border: 0
         height: 40px
         width: calc(100% - 40px)
-        +border-radius(0)
+        +border-radius(2px)
       .btn_search
         background: $black
         border: 0
@@ -651,6 +836,7 @@ header
 
 
 .m_slider
+  margin-top:  0 !important
 
   .slick-arrow
     width: 21px
@@ -711,7 +897,7 @@ header
       top: 0
       width: 100%
       height: 100%
-      background: rgba(0, 0, 0, 0.2)
+      background: rgba(0, 0, 0, 0.3)
     .center
       +flex
       +ai-center
@@ -965,6 +1151,9 @@ header
   padding-top: 118px
   padding-bottom: 140px
   position: relative
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
   @media (max-width: 1200px)
     padding: 100px 0
   @media (max-width: 991px)
@@ -1255,6 +1444,7 @@ footer
   position: relative
   background-position: center
   background-size: cover
+  background-attachment: fixed
   +flex
   +ai-center
   +j-center
@@ -1586,6 +1776,7 @@ h3, .h3
   background-position: center
   background-size: cover
   padding: 120px 0 100px
+
   @media (max-width: 1200px)
     padding: 100px 0 80px
   @media (max-width: 991px)
@@ -2181,6 +2372,110 @@ h3, .h3
         +transition($transition_default)
 
 
+.home
+  .lang
+    .select2-container--default
+      .select2-selection--single
+        .select2-selection__rendered
+          padding-left: 0
+          @media (max-width: 991px)
+            padding-right: 14px
+          span
+            color: #fff
+            border-bottom: 1px dashed #fff
+      .select2-selection--single
+        .select2-selection__arrow
+          &:before
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5.5 5.5L10 1' stroke='%23fff' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
 
+
+
+
+.lang
+  .select2
+    width: auto !important
+  .select2-container--default
+    .select2-selection--single
+      border: 0
+      background: none
+      +flex
+      +ai-center
+
+      +border-radius(0)
+      .select2-selection__rendered
+        +flex
+        +ai-center
+        @media (max-width: 991px)
+          padding-right: 14px
+        .flag_img
+          +flex
+          +ai-center
+          padding-top: 3px
+          margin-right: 10px
+          @media (max-width: 991px)
+            margin-right: 0
+          img
+            max-width: 22px
+        span
+          +flex
+          +ai-center
+          color: $black
+          font-size: 13px
+          font-family: $medium
+          border-bottom: 1px dashed #1C1C1C
+          line-height: 1.3
+          @media (max-width: 991px)
+            display: none
+
+  .select2-container--default
+    &.select2-container--open
+      .select2-selection--single
+        .select2-selection__arrow
+          &:before
+            +transform(rotate(180deg))
+    .select2-selection--single
+      .select2-selection__arrow
+        width: 20px
+        height: 20px
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        margin: auto
+        &:before
+          +b_a
+          right: 0
+          top: 0
+          bottom: 0
+          margin: auto
+          width: 11px
+          height: 7px
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5.5 5.5L10 1' stroke='%231C1C1C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+        b
+          display: none
+
+
+
+
+
+.select2-dropdown
+  border: 0
+  width: auto !important
+  +box-shadow(1px 3px 20px rgba(0, 0, 0, 0.12))
+.select2-results__option
+  +flex
+  +ai-center
+  @media (max-width: 991px)
+    +j-center
+  span
+    font-size: 13px
+    @media (max-width: 991px)
+      display: none
+  .flag_img
+    margin-right: 10px
+    @media (max-width: 991px)
+      margin-right: 0
+    img
+      max-width: 22px
 
 

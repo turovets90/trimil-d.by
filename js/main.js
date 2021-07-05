@@ -21,12 +21,14 @@ $(document).ready(function(){
 
     function format(state) {
         if (!state.id) return state.text; // optgroup
-        return "<span class='flag_img'><img class='flag' src='img/flags/" + state.id.toLowerCase() + ".png'/></span>" + "<span>" + state.text; + "<span>";
+        return "<div class='flag_img'><img class='flag' src='img/flags/" + state.id.toLowerCase() + ".png'/></div>" + "<span>" + state.text; + "<span>";
         console.log(state.id.toLowerCase());
     }
     $(".lang_select").select2({
         minimumResultsForSearch: Infinity,
+        templateSelection: format,
         formatResult: format,
+        templateResult: format,
         formatSelection: format,
         escapeMarkup: function(m) { return m; }
     });
@@ -37,6 +39,7 @@ $(document).ready(function(){
         infinite: true,
         arrows: true,
         dots: true,
+        fade: true,
         //autoplay: true,
         //speed: 3000,
         //autoplaySpeed: 3000,
@@ -283,6 +286,22 @@ $(document).ready(function(){
             }
         ]
     });
+
+
+
+    $(window).resize(function(){
+        var header_height = $('header').outerHeight();
+        $('header').next().css({'margin-top': header_height+'px'});
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > header_height) {
+                $('header').addClass('fixed');
+            } else {
+                $('header').removeClass('fixed');
+            }
+        });
+
+    });
+    $(window).resize();
 
 
 
