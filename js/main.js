@@ -40,7 +40,7 @@ $(document).ready(function(){
         arrows: true,
         dots: true,
         fade: true,
-        //autoplay: true,
+        //autoplay:  true,
         //speed: 3000,
         //autoplaySpeed: 3000,
         slidesToShow: 1,
