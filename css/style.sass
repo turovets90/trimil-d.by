@@ -705,7 +705,7 @@ header
       a
         text-decoration: none
         font-family: $semibold
-        font-size: 12px
+        font-size: 11px
         line-height: 15px
         text-transform: uppercase
         color: $black
@@ -901,6 +901,12 @@ header
     background-size: cover
     background-position: center
     position: relative
+    &.slick-active
+      .center
+        .m_slider_item_content
+          +transform(translateY(0))
+          opacity: 1
+
     &:before
       +b_a
       left: 0
@@ -922,6 +928,9 @@ header
       z-index: 2
       .m_slider_item_content
         color: #fff
+        +transform(translateY(50%))
+        opacity: 0
+        transition: opacity 0.3s ease-in, transform 0.5s linear .1ms
         .title
           font-size: 80px
           line-height: 92px
@@ -943,7 +952,7 @@ header
         .desc
           font-size: 22px
           line-height: 1.2
-          font-family: $open_sans
+          font-family: "Times New Roman"
           font-weight: 600
           margin-bottom: 50px
           @media (max-width: 1400px)
@@ -1314,7 +1323,7 @@ footer
   background-size: cover
   background-position: center
   position: relative
-  padding-top: 48px
+  padding-top: 30px
   &:before
     +b_a
     width: 100%
@@ -1329,7 +1338,7 @@ footer
   .footer_row
     +flex
     +wrap
-    margin-bottom: 28px
+    margin-bottom: 15px
     .col_left
       width: 60%
       +flex
@@ -1368,9 +1377,7 @@ footer
 
     ul
       li
-        margin-bottom: 12px
-        @media (max-width: 767px)
-          margin-bottom: 8px
+        margin-bottom: 8px
         a
           color: #fff
           font-size: 14px
@@ -1382,13 +1389,13 @@ footer
       color: #fff
       font-size: 14px
       line-height: 18px
-      margin-bottom: 25px
+      margin-bottom: 10px
       &:before
         bottom: initial
       @media (max-width: 1200px)
         max-width: 100%
     .email
-      margin-bottom: 25px
+      margin-bottom: 10px
       a
         color: #fff
         font-size: 13px
@@ -1396,7 +1403,7 @@ footer
       li
         margin-bottom: 0
     .phones
-      margin-bottom: 25px
+      margin-bottom: 10px
       ul
         li
           margin-bottom: 0
@@ -1411,7 +1418,7 @@ footer
     font-size: 13px
     text-transform: uppercase
     border-top: 2px solid rgba(196, 196, 196, 0.25)
-    padding: 18px 0
+    padding: 10px 0
 
 
 

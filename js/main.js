@@ -41,7 +41,7 @@ $(document).ready(function(){
         dots: true,
         fade: true,
         //autoplay:  true,
-        //speed: 3000,
+        speed: 2000,
         //autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1
@@ -299,6 +299,11 @@ $(document).ready(function(){
                 $('header').removeClass('fixed');
             }
         });
+
+        //var page_banner_top=$('.page_banner').offset().top;
+        //$('.page_banner').css({
+          //  'height':'calc(100vh - '+page_banner_top+'px)'
+        //});
 
     });
     $(window).resize();
