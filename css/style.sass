@@ -2246,19 +2246,27 @@ h3, .h3
 
 .projects_subcategory
   margin: 0
+  width: 100%
+  display: inline-block
   li
     position: relative
     display: inline-block
+    width: 25%
     padding-left: 22px
     margin-bottom: 12px
+    float: left
     @media (max-width: 1200px)
       //margin-bottom: 30px
       padding-left: 20px
+      width: 33.33%
     @media (max-width: 991px)
       //margin-bottom: 20px
     @media (max-width: 767px)
       //margin-bottom: 10px
       padding-left: 15px
+      width: 50%
+    @media (max-width: 575px)
+      width: 100%
     &:before
       +b_a
       left: 0
