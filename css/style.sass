@@ -342,8 +342,16 @@ body
       &.fixed
         .mm_container
           border-top: 1px solid rgba(28, 28, 28, 0.1)
+        .mm_btn
+          .hamburger
+            span
+              background: #fff
+        .phones_toggler
+          &:before
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='%23fff'/%3e%3c/svg%3e ")
     .mm_container
       border-top: 1px solid rgba(28, 28, 28, 0.1)
+
 
 header
   position: fixed
@@ -382,6 +390,9 @@ header
       .search_toggler
         &:before
           background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M13.3581 7.12903C13.3581 10.5692 10.5692 13.3581 7.12903 13.3581C3.68883 13.3581 0.9 10.5692 0.9 7.12903C0.9 3.68883 3.68883 0.9 7.12903 0.9C10.5692 0.9 13.3581 3.68883 13.3581 7.12903Z' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M12.0625 12.0645L16.998 17' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ")
+    .phones_toggler
+      &:before
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='%23fff'/%3e%3c/svg%3e ")
 
     .main_menu
       .nav
@@ -2251,22 +2262,23 @@ h3, .h3
   li
     position: relative
     display: inline-block
-    width: 25%
+    //width: 25%
     padding-left: 22px
     margin-bottom: 12px
     float: left
+    margin-right: 30px
     @media (max-width: 1200px)
       //margin-bottom: 30px
       padding-left: 20px
-      width: 33.33%
+      //width: 33.33%
     @media (max-width: 991px)
       //margin-bottom: 20px
     @media (max-width: 767px)
       //margin-bottom: 10px
       padding-left: 15px
-      width: 50%
+      //width: 50%
     @media (max-width: 575px)
-      width: 100%
+      //width: 100%
     &:before
       +b_a
       left: 0
@@ -2599,7 +2611,7 @@ body
   &:not(.home)
     .phones_toggler
       &:before
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='%23000'/%3e%3c/svg%3e ")
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14.175 10.3167C13.15 10.3167 12.1583 10.15 11.2333 9.85C10.9417 9.75 10.6167 9.825 10.3917 10.05L9.08333 11.6917C6.725 10.5667 4.51667 8.44167 3.34167 6L4.96667 4.61667C5.19167 4.38333 5.25833 4.05833 5.16667 3.76667C4.85833 2.84167 4.7 1.85 4.7 0.825C4.7 0.375 4.325 0 3.875 0H0.991667C0.541667 0 0 0.2 0 0.825C0 8.56667 6.44167 15 14.175 15C14.7667 15 15 14.475 15 14.0167V11.1417C15 10.6917 14.625 10.3167 14.175 10.3167Z' fill='%23000f'/%3e%3c/svg%3e ")
     .main_menu
       .nav
         li
@@ -2630,3 +2642,31 @@ body
       img, svg
         max-height: 20px
         margin-right: 5px
+.dropdown-menu
+  ul
+    li
+      &:first-child
+        span
+          padding-left: 4px
+
+.phones_toggler
+  + .dropdown-menu
+    *
+      fill: $black !important
+      color: $black !important
+
+
+.main_menu
+  .phones
+    *
+      color: #fff !important
+    svg
+      *
+        fill: #fff !important
+    ul
+      padding-left: 0
+
+
+.contacts_group
+  .address
+    display: block
